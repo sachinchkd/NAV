@@ -6,18 +6,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.wellbeing.custom.CustomBottomNavigation
 import com.example.wellbeing.custom.Screen
-
-import com.example.wellbeing.screens.DailyScreen
-import com.example.wellbeing.screens.SettingScreen
-import com.example.wellbeing.screens.StepScreen
-import com.example.wellbeing.screens.WaterScreen
+import com.example.wellbeing.screens.*
 
 @Composable
 fun BottomNavGraph(navController: NavHostController){
     NavHost(
 
         navController = navController,
-        startDestination = Screen.Daily.id
+        startDestination = Screen.Step.id
 //        modifier = Modifier.horizontalScroll(rememberScrollState())
     ){
         composable(route = Screen.Step.id){
@@ -29,8 +25,12 @@ fun BottomNavGraph(navController: NavHostController){
         composable(route = Screen.Daily.id){
             DailyScreen()
         }
+        composable(route = Screen.Food.id){
+            FoodScreen()
+        }
         composable(route = Screen.Settings.id){
             SettingScreen()
         }
+
     }
 }

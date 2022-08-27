@@ -10,14 +10,16 @@ sealed class Screen(
     val title: String,
 
 ){
-    object Step:Screen(Icons.Outlined.DirectionsWalk,"step","Screen" )
+    object Step:Screen(Icons.Outlined.DirectionsWalk,"step","Step" )
     object Water:Screen( Icons.Outlined.WaterDrop,"water","Water")
     object Daily:Screen(Icons.Outlined.LockClock,"daily","Daily" )
-    object Settings:Screen( Icons.Outlined.Settings,"settings","Settings")
+    object Food:Screen( Icons.Outlined.Fastfood,"food","Food")
+    object Settings:Screen( Icons.Outlined.Settings,"settings","Setting")
+
 
     object Items{
         val list = listOf(
-            Step,Water,Daily, Settings
+            Step,Water,Daily,Food, Settings
         )
     }
 }
